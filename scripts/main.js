@@ -67,7 +67,6 @@ window.onresize=changeFormArea;
 			getMessages(parseFloat(babble.currentMessage),getMessageCallBack);
 		
 	};
-
 	function sendFunction()
 	{
 		var user1=JSON.parse(localStorage.getItem('babble')).userInfo;
