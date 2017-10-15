@@ -23,10 +23,10 @@ window.Babble.deleteMessage=deleteMessage;
 			<div class="register_div">
 				<h2>Who are you?</h2>
 				<form class="register_form">
-					<p class="registerText registerText--fullName">Full Name:</p>
-					<p class="registerText registerText--email">Email:</p> 
-							<input type="text" class="registerTextInput registerTextInput--top" >
-							<input type="text" class="registerTextInput registerTextInput--bottom" >
+					<label for="fullnameID" class="registerText registerText--fullName">Full Name:</label>
+							<input id="fullnameID" type="text" class="registerTextInput registerTextInput--top" >
+							<label for="emailID" class="registerText registerText--email">Email:</label> 
+							<input id="emailID" type="text" class="registerTextInput registerTextInput--bottom" >
 							<input type="button" class="registerButton registerButton--anonimus" value="Stay Anonymus" onclick="anonimusRegister()">
 							<input type="button" class="registerButton registerButton--save" value="Save" onclick="getRegisterFormData()">
 				</form>
@@ -199,7 +199,7 @@ window.onresize=changeFormArea;
 		var message=document.getElementById(id);
 		message.getElementsByTagName("ARTICLE")[0].style.backgroundColor= "#ECEEED";
 		if(message.getElementsByTagName("BUTTON").length>0)
-			message.getElementsByTagName("BUTTON")[0].style.display="";
+			message.getElementsByTagName("BUTTON")[0].style.visibility="visible";
 	}
 
 	function messageNoHover(id)
@@ -207,7 +207,7 @@ window.onresize=changeFormArea;
 		var message=document.getElementById(id);
 		message.getElementsByTagName("ARTICLE")[0].style.backgroundColor= "white";
 		if(message.getElementsByTagName("BUTTON").length>0)
-			message.getElementsByTagName("BUTTON")[0].style.display="none";
+			message.getElementsByTagName("BUTTON")[0].style.visibility="hidden";
 	}
 	function getRegisterFormData()
 	{
