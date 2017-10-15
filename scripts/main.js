@@ -121,6 +121,7 @@ window.onresize=changeFormArea;
 			var art=document.createElement("ARTICLE");
 			var timeSent=document.createElement("TIME");
 			var timeNow=message.message.timestamp;
+			timeSent.setAttribute('datetime',Date.now());
 			timeSent.innerHTML = timeNow;
 			var headingCite=document.createElement("CITE");
 			if(username=="")
