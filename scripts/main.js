@@ -65,7 +65,6 @@ window.onresize=changeFormArea;
 			localStorage.setItem("babble",JSON.stringify(babble));
 
 			getMessages(parseFloat(babble.currentMessage),getMessageCallBack);
-		
 	};
 	function sendFunction()
 	{
@@ -87,7 +86,6 @@ window.onresize=changeFormArea;
 			 	message: textbox[0].value,
 				timestamp:timeNow
 			};
-
 			textbox[0].value="";
 			growableChangeDom();
 			postMessage(mes,postMessageCallBack);
