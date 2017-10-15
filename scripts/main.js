@@ -23,11 +23,11 @@ window.Babble.deleteMessage=deleteMessage;
 			<div class="register_div">
 				<h2>Who are you?</h2>
 				<form class="register_form">
-					<label class="registerText registerText--fullName">Full Name:</label>
+					<label for="fullnameID" class="registerText registerText--fullName">Full Name:</label>
 					
-							<input type="text" class="registerTextInput registerTextInput--top" >
-							<label class="registerText registerText--email">Email:</label> 
-							<input type="text" class="registerTextInput registerTextInput--bottom" >
+							<input id="fullnameID" type="text" class="registerTextInput registerTextInput--top" >
+							<label for="emailID" class="registerText registerText--email">Email:</label> 
+							<input id="emailID" type="text" class="registerTextInput registerTextInput--bottom" >
 							<input type="button" class="registerButton registerButton--anonimus" value="Stay Anonymus" onclick="anonimusRegister()">
 							<input type="button" class="registerButton registerButton--save" value="Save" onclick="getRegisterFormData()">
 				</form>
