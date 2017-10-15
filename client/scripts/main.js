@@ -107,7 +107,9 @@ window.onresize=changeFormArea;
 			growableChangeDom();
 			postMessage(mes,postMessageCallBack);
 		}
+		return false;
 	}
+	function getData(){return false;}
 	function createMessageDOM(message)
 	{
 		if(document.getElementById(message.id)==null)
@@ -152,12 +154,12 @@ window.onresize=changeFormArea;
 			listItem.appendChild(img);
 			listItem.appendChild(art);
 			listItem.id=message.id;
-			listItem.tabIndex="0";
-			listItem.addEventListener("focus",  function(){messageHover(idNum)}, true);
+			art.tabIndex="0";
+			art.addEventListener("focus",  function(){messageHover(idNum)}, true);
 			var idNum=listItem.id;
 			art.addEventListener("mouseover", function(){messageHover(idNum)});
 			art.addEventListener("mouseout", function(){messageNoHover(idNum)});
-			
+			btn.addEventListener("focusout",function(){messageNoHover(idNum)});
 			var orderedList = document.getElementsByTagName("OL")[0];
 			if(orderedList)
 				orderedList.appendChild(listItem);
