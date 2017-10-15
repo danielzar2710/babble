@@ -135,7 +135,7 @@ window.onresize=changeFormArea;
 				btn.className ="x_button";
 				btn.innerHTML="x";
 				btn.setAttribute( "onClick", "deleteMessage(this.parentNode.parentNode.id,deleteMessageCallBack);" );
-				btn.style.display="none";
+				btn.style.visibility="hidden";
 				btn.tabIndex="0";
 				art.appendChild(btn);
 			}
@@ -152,9 +152,11 @@ window.onresize=changeFormArea;
 			listItem.appendChild(art);
 			listItem.id=message.id;
 			listItem.tabIndex="0";
+			listItem.addEventListener("focus",  function(){messageHover(idNum)}, true);
 			var idNum=listItem.id;
 			art.addEventListener("mouseover", function(){messageHover(idNum)});
 			art.addEventListener("mouseout", function(){messageNoHover(idNum)});
+			
 			var orderedList = document.getElementsByTagName("OL")[0];
 			if(orderedList)
 				orderedList.appendChild(listItem);
