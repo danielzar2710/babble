@@ -12,29 +12,6 @@ window.Babble.deleteMessage=deleteMessage;
 };
 	window.onload=function() { 
 		if(localStorage.getItem('babble') === null){
-			var div=document.createElement("div");
-			var div_shady=document.createElement("div");
-			var body = document.getElementsByTagName("body")[0]; 
-			body.appendChild(div_shady);
-			body.appendChild(div);
-			div.className="register_div";
-			div_shady.className="shadyBackground";
-			div.innerHTML = `
-			<div class="register_div">
-				<h2>Who are you?</h2>
-				<form class="register_form">
-					<label class="registerText registerText--fullName">Full Name:</label>
-					<label class="registerText registerText--email">Email:</label> 
-							<input type="text" class="registerTextInput registerTextInput--top" >
-							<input type="text" class="registerTextInput registerTextInput--bottom" >
-							<input type="button" class="registerButton registerButton--anonimus" value="Stay Anonymus" onclick="anonimusRegister()">
-							<input type="button" class="registerButton registerButton--save" value="Save" onclick="getRegisterFormData()">
-				</form>
-			</div>
-		  `; 					
-		}
-		else
-		{
 			var babble=JSON.parse(localStorage.getItem("babble"));
 			if(babble)
 			{
@@ -42,6 +19,15 @@ window.Babble.deleteMessage=deleteMessage;
 				getMessages(parseFloat(babble),getMessageCallBack);
 				getStats(getStatsCallBack);
 			}
+		}
+		else
+		{
+			var x = document.getElementsByClassName('register_div')[0];
+			var x_shady=document.getElementsByClassName('shadyBackground')[0];
+			if(x)
+				x.parentNode.removeChild(x);
+			if(x_shady)
+				x_shady.parentNode.removeChild(x_shady);
 		}	
 }; 
 window.onresize=changeFormArea;
