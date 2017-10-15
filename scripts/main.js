@@ -12,6 +12,29 @@ window.Babble.deleteMessage=deleteMessage;
 };
 	window.onload=function() { 
 		if(localStorage.getItem('babble') === null){
+			var div=document.createElement("div");
+			var div_shady=document.createElement("div");
+			var body = document.getElementsByTagName("body")[0]; 
+			body.appendChild(div_shady);
+			body.appendChild(div);
+			div.className="register_div";
+			div_shady.className="shadyBackground";
+			div.innerHTML = `
+			<div class="register_div">
+				<h2>Who are you?</h2>
+				<form class="register_form">
+					<p class="registerText registerText--fullName">Full Name:</p>
+					<p class="registerText registerText--email">Email:</p> 
+							<input type="text" class="registerTextInput registerTextInput--top" >
+							<input type="text" class="registerTextInput registerTextInput--bottom" >
+							<input type="button" class="registerButton registerButton--anonimus" value="Stay Anonymus" onclick="anonimusRegister()">
+							<input type="button" class="registerButton registerButton--save" value="Save" onclick="getRegisterFormData()">
+				</form>
+			</div>
+		  `; 					
+		}
+		else
+		{
 			var babble=JSON.parse(localStorage.getItem("babble"));
 			if(babble)
 			{
@@ -19,15 +42,6 @@ window.Babble.deleteMessage=deleteMessage;
 				getMessages(parseFloat(babble),getMessageCallBack);
 				getStats(getStatsCallBack);
 			}
-		}
-		else
-		{
-			var x = document.getElementsByClassName('register_div')[0];
-			var x_shady=document.getElementsByClassName('shadyBackground')[0];
-			if(x)
-				x.parentNode.removeChild(x);
-			if(x_shady)
-				x_shady.parentNode.removeChild(x_shady);
 		}	
 }; 
 window.onresize=changeFormArea;
@@ -65,7 +79,9 @@ window.onresize=changeFormArea;
 			localStorage.setItem("babble",JSON.stringify(babble));
 
 			getMessages(parseFloat(babble.currentMessage),getMessageCallBack);
+		
 	};
+
 	function sendFunction()
 	{
 		var user1=JSON.parse(localStorage.getItem('babble')).userInfo;
@@ -86,6 +102,7 @@ window.onresize=changeFormArea;
 			 	message: textbox[0].value,
 				timestamp:timeNow
 			};
+
 			textbox[0].value="";
 			growableChangeDom();
 			postMessage(mes,postMessageCallBack);
@@ -327,6 +344,7 @@ window.onresize=changeFormArea;
 		var width2=main.offsetWidth;
 		var res=((width1*1.0)/width2)*100.0+8;
 		div.style.marginRight=res+"%";
+
 	}
 ///////////////////////////////////////////////
 ///////////////md5
@@ -434,18 +452,25 @@ window.onresize=changeFormArea;
 								   utftext += String.fromCharCode(((c >> 6) & 63) | 128);
 								   utftext += String.fromCharCode((c & 63) | 128);
 						   }
+		
 				   }
+		
 				   return utftext;
 		   };
+		
 		   var x=Array();
 		   var k,AA,BB,CC,DD,a,b,c,d;
 		   var S11=7, S12=12, S13=17, S14=22;
 		   var S21=5, S22=9 , S23=14, S24=20;
 		   var S31=4, S32=11, S33=16, S34=23;
 		   var S41=6, S42=10, S43=15, S44=21;
+		
 		   string = Utf8Encode(string);
+		
 		   x = ConvertToWordArray(string);
+		
 		   a = 0x67452301; b = 0xEFCDAB89; c = 0x98BADCFE; d = 0x10325476;
+		
 		   for (k=0;k<x.length;k+=16) {
 				   AA=a; BB=b; CC=c; DD=d;
 				   a=FF(a,b,c,d,x[k+0], S11,0xD76AA478);
@@ -516,7 +541,9 @@ window.onresize=changeFormArea;
 				   b=AddUnsigned(b,BB);
 				   c=AddUnsigned(c,CC);
 				   d=AddUnsigned(d,DD);
-				   }	
+				   }
+		
 			   var temp = WordToHex(a)+WordToHex(b)+WordToHex(c)+WordToHex(d);
+		
 			   return temp.toLowerCase();
 		}
