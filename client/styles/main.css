@@ -1,3 +1,4 @@
+
 body {
 	margin:0;
     padding:0;
@@ -20,7 +21,6 @@ h2{
 	font-size: 22.5px;
 	top:6%;
 }
-
 .registerButton{
 	border:0px;
 	bottom:17%;
@@ -40,7 +40,6 @@ h2{
 	padding-left: 10px;
 	color: white;
 }
-
 .registerTextInput{
 	position: absolute;
 	width: 60%;
@@ -48,25 +47,16 @@ h2{
 	left:9%;
 	border-width: 1px;
 }
-.registerTextInput--top{
-	top: calc(22.8% +  15px);
-}
-.registerTextInput--bottom{
-	top: calc(30.8% +  40px);
-}
-
+.registerTextInput--top{top: calc(22.8% +  15px);}
+.registerTextInput--bottom{top: calc(30.8% +  40px);}
 .registerText{
 	position: absolute;
 	font-size: 12px;
 	left:9%;
 	color: rgba(50,50,50,0.8);
 }
-.registerText--fullName{
-	top:20.8%;	
-}
-.registerText--email{
-	top: calc(30.8% +  15px);
-}
+.registerText--fullName{top:20.8%;	}
+.registerText--email{top: calc(30.8% +  15px);}
 
 div.register_div{
 	position: fixed;
@@ -94,13 +84,8 @@ div.register_div{
 		left:0;
 		background-color: #61D290;
 	}
-	main{
-		
-		width:82% !important;
-	}
-	h1 {
-		width:75% !important;
-	}
+	main{width:82% !important;}
+	h1 {width:75% !important;}
 	div.register_div{
 			width: 35% !important;
 			height:32% !important;
@@ -115,9 +100,7 @@ div.register_div{
 			margin-right: 20px;
 			right: calc(7.5% + 35px) !important;
 		}
-		.registerButton--save{
-			margin-left: 2% !important;
-		}
+		.registerButton--save{margin-left: 2% !important;}
 		.registerTextInput{
 			right: 7.5% !important;
 			width: 69% !important;
@@ -125,22 +108,14 @@ div.register_div{
 			left: 25% !important;
 			top: calc(25.8% + 15px);
 		}
-		.registerTextInput--top{
-			top: calc(25.8% + 15px);
-		}
-		.registerTextInput--bottom{
-			top: calc(30.8% +  40px);
-		}
+		.registerTextInput--top{top: calc(25.8% + 15px);}
+		.registerTextInput--bottom{top: calc(30.8% +  40px);}
 		.registerText{
 			font-size: 12px !important;
 			left: 3% !important;
 		}
-		.registerText--fullName{
-			top: calc(25.8% + 20px) !important;	
-		}
-		.registerText--email{
-			top: calc(46.5% +  15px) !important;
-		}
+		.registerText--fullName{top: calc(25.8% + 20px) !important;	}
+		.registerText--email{top: calc(46.5% +  15px) !important;}
 		form.messageForm{
 			background-color: white;
 			height: 13.5%;
@@ -174,10 +149,7 @@ div.register_div{
 			border-top: 1px solid #E8E8E8 !important;
 		  }
 		  .backgroundInstall
-		  {
-				
-			  background-color: white;
-		  }
+		  {background-color: white;}
 }
 .backgroundInstall
 {
@@ -185,9 +157,7 @@ div.register_div{
 	z-index: 2;
 	width: 100%;
 }
-div.Growable {
-	border-top: 0;
-  }
+
 dt{
 	display: inline;
 	float: left;
@@ -214,9 +184,7 @@ input{
 	padding: 2px;
 	padding-left: 4px;
 }
-input:focus{
-		outline-width: 0;
-}
+input:focus{outline-width: 0;}
 
 input[type="text"]{
 	border-radius: 6px;
@@ -411,6 +379,7 @@ ol{
     top: 0;
 }
 div.Growable {
+	border-top: 0;
 	position: relative;
 	max-height: 300px;
 	min-height: 100%;
@@ -446,21 +415,15 @@ div.Growable {
 	height: 100%;
 	overflow: visible;
   }
- 
-  /* Let's get this party started */
 ::-webkit-scrollbar {
 	width: 6px;
 	background-color: "white"; 
 }
- 
-/* Track */
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
     -webkit-border-radius: 10px;
 	border-radius: 10px;
-	
 }
-/* Handle */
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -470,4 +433,27 @@ div.Growable {
 ::-webkit-scrollbar-thumb:window-inactive {
 	background: #EBEDEC;  
 }
-  
+  /* vietnamese */
+@font-face {
+	font-family: 'Nunito';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v9/4fsTWUM100DESRCrYMRNTfesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+	unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+  }
+  /* latin-ext */
+  @font-face {
+	font-family: 'Nunito';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v9/qEjAkCC_I8-NsX6aYiQHCfesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+	font-family: 'Nunito';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Nunito Regular'), local('Nunito-Regular'), url(https://fonts.gstatic.com/s/nunito/v9/cSNs3NwpEgPVRQzvkh3NeQ.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+  }
