@@ -23,8 +23,8 @@ window.Babble.deleteMessage=deleteMessage;
 			<div class="register_div">
 				<h2>Who are you?</h2>
 				<form class="register_form">
-					<p class="registerText registerText--fullName">Full Name:</p>
-					<p class="registerText registerText--email">Email:</p> 
+					<label class="registerText registerText--fullName">Full Name:</label>
+					<label class="registerText registerText--email">Email:</label> 
 							<input type="text" class="registerTextInput registerTextInput--top" >
 							<input type="text" class="registerTextInput registerTextInput--bottom" >
 							<input type="button" class="registerButton registerButton--anonimus" value="Stay Anonymus" onclick="anonimusRegister()">
