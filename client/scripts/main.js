@@ -332,8 +332,6 @@ window.onresize=changeFormArea;
 		ol.style.top="calc("+pixVal+"px + 11%)";
 		dl.style.top=""+pixVal+"px";
 		var specialDiv=document.getElementsByClassName("backgroundInstall")[0];
-		console.log(textarea);
-		console.log(textarea.clientHeight+'px');
 		specialDiv.style.minHeight=''+textarea.clientHeight+'px';
 	}
 	function changeFormArea()
@@ -344,13 +342,7 @@ window.onresize=changeFormArea;
 		var width = div.offsetWidth;
 		var width1 = button.offsetWidth;
 		var width2=main.offsetWidth;
-		console.log('width '+width);
-		console.log('width1 '+width1);
-		console.log('width2 '+width2);
-		//div.style.marginRight;
 		var res=((width1*1.0)/width2)*100.0+8;
-		console.log(res);
-		console.log(res*(width2/100.0));
 		div.style.marginRight=res+"%";
 
 	}
